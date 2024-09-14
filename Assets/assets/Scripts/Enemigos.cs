@@ -23,23 +23,13 @@ public class Enemigos : MonoBehaviour
     {
         transform .Translate(Vector3.forward*(Time.deltaTime*this.velocidad));
 
-        if(transform.position.x < -4)
-        {
-            transform.position = new Vector3(x: -4, transform.position.y, transform.position.z);
-        }
-        if(transform.position.x > 4)
-        {
-            transform.position = new Vector3(x: 4, transform.position.y, transform.position.z);
-        }
-
-
-        // if(transform.position.x < -4)
+        // if(transform.position.z < -4)
         // {
-        //     transform.position = new Vector3(x: -4, transform.position.y, transform.position.z);
+        //     transform.position = new Vector3(  transform.position.y, transform.position.x,-4 );
         // }
-        // if(transform.position.x > 4)
+        // if(transform.position.z > 4)
         // {
-        //     transform.position = new Vector3(x:4, transform.position.y, transform.position.z);
+        //     transform.position = new Vector3( transform.position.y, transform.position.x,4);
         // }
     }
 

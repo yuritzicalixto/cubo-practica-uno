@@ -7,9 +7,11 @@ public class Jugador : MonoBehaviour
 {
     private float horizontal;
     //rango, para saber la rapides del jugador
+    //rango para la velocidad
     [Range (1,10)]
     //velocidad
     public float velocidad;
+    public GameObject Esfera;
     //constructor
     public Jugador()
     {
@@ -24,23 +26,15 @@ public class Jugador : MonoBehaviour
         //Porque me movere en los 3 ejes -> Vector3
         transform.Translate(Vector3.right * (horizontal*Time.deltaTime*velocidad));
 
-        if(transform.position.z < -4)
+        if(transform.position.x < -4)
         {
-            transform.position = new Vector3( transform.position.y, transform.position.x, -4);
+            transform.position = new Vector3(x:-4, transform.position.y, transform.position.z);
         }
-        if(transform.position.z > 4)
+        if(transform.position.x > 4)
         {
-            transform.position = new Vector3(transform.position.y, transform.position.x, 4);
+            transform.position = new Vector3(x:4,transform.position.y, transform.position.z);
         }
 
-        // if(transform.position.x < -4)
-        // {
-        //     transform.position = new Vector3(x: -4, transform.position.y, transform.position.z);
-        // }
-        // if(transform.position.x > 4)
-        // {
-        //     transform.position = new Vector3(x:4, transform.position.y, transform.position.z);
-        // }
     }
     // Start is called before the first frame update
     void Start()
@@ -53,5 +47,17 @@ public class Jugador : MonoBehaviour
     {
         //ejecuta los frames del movimiento, llamar al metodo que se ejecute
         moverHorizontal();
+        lanzar();
     }
+
+
+    //Metodo para lanzar
+    void lanzar() 
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(Esfera, transform.position, transform.rotation);
+        }
+    }
+
 }
