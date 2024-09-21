@@ -356,11 +356,15 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/assets/Scripts/CambioScene.cs"
+"Assets/assets/Scripts/Colisionador.cs"
 "Assets/assets/Scripts/Destructor.cs"
 "Assets/assets/Scripts/Enemigos.cs"
 "Assets/assets/Scripts/Esfera.cs"
 "Assets/assets/Scripts/Fabrica.cs"
+"Assets/assets/Scripts/juegoController.cs"
 "Assets/assets/Scripts/Jugador.cs"
+"Assets/assets/Scripts/PuntuacionFinal.cs"
 -langversion:9.0
 /deterministic
 /optimize+
